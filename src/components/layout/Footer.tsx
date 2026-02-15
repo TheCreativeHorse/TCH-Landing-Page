@@ -14,9 +14,8 @@ const Footer: React.FC = () => {
                     <div>
                         <h3 className="font-heading font-bold text-lg mb-4 text-white">Connect</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-300 hover:text-white transition-colors">LinkedIn</a></li>
-                            <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Twitter</a></li>
-                            <li><a href="mailto:hello@mustafapetti.com" className="text-gray-300 hover:text-white transition-colors">Email</a></li>
+                            <li><a href="https://linkedin.com/in/mustafapetti/?skipRedirect=true" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">LinkedIn</a></li>
+                            <li><a href="mailto:mustafa@mustafapetti.com" className="text-gray-300 hover:text-white transition-colors">Email</a></li>
                         </ul>
                     </div>
                     <div className="md:text-right">
