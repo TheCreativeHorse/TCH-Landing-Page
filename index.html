@@ -40,16 +40,24 @@
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
   <script>
-    window.addEventListener("message", function (e) {
-      if (e.data.event && e.data.event.indexOf("calendly") === 0) {
+    (function () {
+      var calendlyBookingFired = false;
+
+      window.addEventListener("message", function (e) {
+        if (!e || !e.data || typeof e.data.event !== "string") return;
+
+        // Optional safety: only accept Calendly messages
+        if (typeof e.origin === "string" && e.origin.indexOf("calendly.com") === -1) return;
+
         if (e.data.event === "calendly.event_scheduled") {
+          if (calendlyBookingFired) return;
+          calendlyBookingFired = true;
+
           window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: "calendly_booking"
-          });
+          window.dataLayer.push({ event: "calendly_booking" });
         }
-      }
-    });
+      });
+    })();
   </script>
 </body>
 
