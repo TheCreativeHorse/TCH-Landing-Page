@@ -9,45 +9,48 @@ declare global {
 
 const StrategyCall: React.FC = () => {
     return (
-        <div className="py-12 md:py-20 bg-neutral-light min-h-screen">
+        <div className="py-8 md:py-20 bg-neutral-light min-h-screen">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
+                <div className="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                         {/* Left Column - Meeting Details */}
-                        <div className="lg:col-span-2 p-8 md:p-12 bg-neutral-light border-r border-gray-200">
+                        <div className="lg:col-span-2 p-6 md:p-12 bg-neutral-light border-b lg:border-r border-gray-200 text-center lg:text-left">
                             {/* Profile Image Placeholder */}
-                            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-blue to-primary-sky flex items-center justify-center text-white text-sm font-bold mb-6">
+                            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-primary-blue to-primary-sky flex items-center justify-center text-white text-xs md:text-sm font-bold mb-6 mx-auto lg:mx-0">
                                 Mustafa Petti
                             </div>
 
                             {/* Meeting Title */}
-                            <h1 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4">
-                                Book Your Free "No Obligation" Consultation Today!
+                            <h1 className="text-xl md:text-3xl font-heading font-bold text-gray-900 mb-4">
+                                Ready to make your weeks more predictable?
                             </h1>
 
-                            {/* Meeting Duration */}
-                            <div className="flex items-center text-gray-600 mb-3">
-                                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span className="font-medium">15 Mins</span>
-                            </div>
+                            {/* Meeting Info Container */}
+                            <div className="inline-block lg:block text-left">
+                                {/* Meeting Duration */}
+                                <div className="flex items-center text-gray-600 mb-3">
+                                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span className="font-medium text-sm md:text-base">15 Mins</span>
+                                </div>
 
-                            {/* Meeting Date (Dynamic from Calendly) */}
-                            <div className="flex items-center text-gray-600 mb-6">
-                                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                                <span className="font-medium">Select a date & time →</span>
+                                {/* Meeting Date */}
+                                <div className="flex items-center text-gray-600 mb-6">
+                                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span className="font-medium text-sm md:text-base">Pick a date & time →</span>
+                                </div>
                             </div>
 
                             {/* Meeting Description */}
-                            <p className="text-gray-700 leading-relaxed">
-                                This discovery call will help us understand more about your business objectives and answer any questions you have.
+                            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                                Book a 15 minute call and we’ll look at where your current demand is coming from and what might be missing.
                             </p>
                         </div>
 
-                        <div className="lg:col-span-3 p-0 min-h-[700px]">
+                        <div className="lg:col-span-3 p-0 min-h-[600px] md:min-h-[700px]">
                             <iframe
                                 src="https://calendly.com/mustafa-mustafapetti/30min?embed_domain=localhost&embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1&primary_color=007BFF"
                                 width="100%"
