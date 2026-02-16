@@ -39,6 +39,18 @@
 
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script>
+    window.addEventListener("message", function (e) {
+      if (e.data.event && e.data.event.indexOf("calendly") === 0) {
+        if (e.data.event === "calendly.event_scheduled") {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "calendly_booking"
+          });
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
